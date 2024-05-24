@@ -28,21 +28,22 @@ export const Works = () => {
         <StyledWorks>
             <Container>
                 <FlexWrapper justify={"space-between"}>
-                    <WrapperText>
-                        <StyledText>Years
-                            Experience
-                            Working</StyledText>
-                    </WrapperText>
+
+                    <StyledText>Years
+                        Experience
+                        Working</StyledText>
+
                     <WrapperWorks>
                         <Title>
                             Developer and Designer, specialized in<br/>
                             UI/UX and Web Developer
                         </Title>
-                        <FlexWrapper justify={"flex-end"}>
+                        <FlexWrapper>
                             {workData.map((w) => {
                                 return (<Work iconId={w.iconId} title={w.title}/>)
                             })}
                         </FlexWrapper>
+
                     </WrapperWorks>
                 </FlexWrapper>
             </Container>
@@ -51,24 +52,21 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-    padding: 100px;
+    padding: 100px 0;
     background-color: ${theme.colors.primaryBg};
 `
-const WrapperText = styled.div`
+const StyledText = styled.p`
     max-width: 207px;
     width: 100%;
     margin-right: 96px;
 `
-const StyledText = styled.p`
-    
-`
 const WrapperWorks = styled.div`
     max-width: 894px;
     width: 100%;
-
-    ${FlexWrapper} {
+    ${FlexWrapper}{
         gap: 10px;
     }
+
 `
 const Title = styled.h1`
     text-align: center;

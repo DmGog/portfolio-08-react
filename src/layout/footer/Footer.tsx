@@ -19,7 +19,9 @@ export const Footer = () => {
                             Connect</TitleFooter>
                         <WrapperSocialIcon>
                             {social.map((s) => {
-                                return <Icon iconId={s} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
+                                return <Link>
+                                    <Icon iconId={s} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
+                                </Link>
                             })}
                         </WrapperSocialIcon>
                     </WrapperRight>
@@ -76,8 +78,8 @@ const Form = styled.form`
     gap: 40px;
     max-width: 500px;
     width: 100%;
-    
-    label{
+
+    label {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -97,3 +99,7 @@ const Button = styled.button`
 `
 
 const Copyright = styled.small``
+
+const Link = styled.a`
+    display: inline-block
+`

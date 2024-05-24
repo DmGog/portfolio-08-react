@@ -41,7 +41,7 @@ export const Header = () => {
 
 const StyledHeader = styled.div`
     background-color: gray;
-
+    
 `
 const StyledLogo = styled.a`
    

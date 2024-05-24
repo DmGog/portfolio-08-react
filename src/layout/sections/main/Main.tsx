@@ -11,7 +11,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper>
+                <FlexWrapper align={"center"}>
                     <div>
                         <StyledName>Hello!
                             I’m Zarror Nibors</StyledName>
@@ -44,4 +44,6 @@ const StyledMain = styled.section`
 const StyledName = styled.span``
 const StyledText = styled.p``
 const StyledButton = styled.button``
-const StyledPhoto = styled.img``
+const StyledPhoto = styled.img`
+    height: 100vh;
+`
